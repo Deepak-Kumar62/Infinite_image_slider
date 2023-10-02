@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+}
+
+body h1{
+    position: absolute;
+    top: 10%;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.container{  
+    width: 70%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+}
+
+.slide_control{
+    width: 73%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+}
+
+.slide_control i{
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 22px;
+    cursor: pointer;
+    
+}
+
+.slide_control #next{
+    right: -25px;
+}
+
+.slide_control #prev{
+    left: -25px;
+}
+
+.slides{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.slide{
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    user-select: none;
+}
+
+.dot_container{
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.dot_container span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(166, 196, 223);
+    transition: all 0.5s ease-out;
+}
+
+.dot_active{
+    background-color: rgb(75, 222, 75) !important;
+}
+
+.dot_container span:hover{
+    background-color: rgb(229, 72, 72);
+}
